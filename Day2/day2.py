@@ -7,24 +7,26 @@ Created on Fri Dec  2 08:28:23 2022
 """
 
 import pandas as pd
+pd.options.mode.chained_assignment = None  # default='warn'
 import numpy as np
 import time
 
+# This is for testing its effective ;)
 
-
-file = open("/home/nwk/Desktop/AoC/Day2/day2_input.txt", "r")
-data2 = file.read()
-file.close()
-fout = open("/home/nwk/Desktop/AoC/Day2/day2_input_test.txt", "a")
-
-for i in range(1, 2500):
-    fout.write(data2)
-fout.close()
+# =============================================================================
+# file = open("/home/nwk/Desktop/AoC/Day2/day2_input.txt", "r")
+# data2 = file.read()
+# file.close()
+# fout = open("/home/nwk/Desktop/AoC/Day2/day2_input_test.txt", "a")
+# 
+# for i in range(1, 2500):
+#     fout.write(data2)
+# fout.close()
+# =============================================================================
 
 
 start = time.time()
 df = pd.read_csv("/home/nwk/Desktop/AoC/Day2/day2_input.txt", sep=" ", header=None)
-
 
 df = df.rename(columns={0: "Opponent", 1: "Me"})
 
